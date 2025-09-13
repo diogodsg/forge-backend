@@ -16,6 +16,7 @@ model User {
   password  String
   name      String
   isAdmin   Boolean @default(false)
+  githubId  String? @unique @map("github_id")
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   pdiPlan   PdiPlan?
